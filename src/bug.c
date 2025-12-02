@@ -11,6 +11,7 @@ int sum_u8(const uint8_t* p, size_t n){
 }
 
 void write_tail(size_t idx, uint8_t v){
+    if (idx >= 16) return;
     uint8_t* q = (uint8_t*)BUF;
     q[idx] = v;
 }
